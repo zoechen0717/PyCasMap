@@ -1,7 +1,5 @@
 # PyCasMap
 
-[![PyTest](https://github.com/zoechen0717/PyCasMap/actions/workflows/pytest.yml/badge.svg)](https://github.com/zoechen0717/PyCasMap/actions/workflows/pytest.yml)
-
 **PyCasMap** is a Python tool for constructing and mapping Cas12a-based CRISPR multiplex constructs from high-throughput sequencing data. It supports flexible 3-10plex constructs with automatic R1/R2 sequence generation and produces results identical to the original casmap implementation.
 
 ## Features
