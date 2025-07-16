@@ -37,8 +37,6 @@ GATAATGAATCGCATATCGATCC 0   0
 TCTAGTAAGTGACATAAGACCGT 0   1
 GACCATTGGCTGCGAAGCATCGA 0   2
 TTACTCAGTCAGGTGTAACGGTT 0   3
-TTTACAGCGGAGGGAGACTTGTT 0   4
-ACGGCGTGCTAAATCCAGAGCGC 0   5
 GACAAAACATCCCCATATCTCAC 1   0
 CTAACAATGACCTCGATTGCTTG 1   1
 GATCCATCCGGAAGCCTATGCTC 1   2
@@ -94,11 +92,6 @@ ConstructID   Counts
 1             5678
 ...
 ```
-
-## Validation
-
-PyCasMap has been extensively validated against the original casmap using both simulated and real 4plex/6plex data. All main workflows (constructs, build, spacers, tuples) produce **identical results**. See `parallel_test.py` and related scripts for details.
-
 ## Contributing
 
 Contributions are welcome! Please fork the repo, create a feature branch, and submit a pull request.
