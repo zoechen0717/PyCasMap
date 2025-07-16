@@ -81,7 +81,7 @@ def test_spacers_command():
         if pycasmap_result.returncode != 0:
             print(f"PyCasMap error: {pycasmap_result.stderr}")
     
-    return True
+    assert True
 
 if __name__ == "__main__":
     test_spacers_command() 

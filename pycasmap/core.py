@@ -109,6 +109,7 @@ class Construct:
         """Get full construct sequence"""
         return self._build_sequence(self.spacers, self.constants)
     
+    @property
     def cid(self) -> int:
         """Get construct ID"""
         return self.construct_id
@@ -404,7 +405,7 @@ class PyCasMap:
         """Build and save construct sequences to FASTA file"""
         with open(output_file, 'w') as f:
             for construct in self.constructs:
-                f.write(f">cid_{construct.cid()}\n{construct.sequence()}\n")
+                f.write(f">cid_{construct.cid}\n{construct.sequence()}\n")
         print(f"Construct sequences saved to: {output_file}")
     
     def describe_reads(self, r1_file: str, r2_file: str, tuple_table: TupleTable, 

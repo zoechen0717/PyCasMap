@@ -22,7 +22,7 @@ def test_build_command():
     for file_path in [spacers_file, constants_file]:
         if not os.path.exists(file_path):
             print(f"❌ Test file not found: {file_path}")
-            return False
+            assert False, f"Test file not found: {file_path}"
     
     print("✅ All test files found")
     
@@ -88,8 +88,10 @@ def test_build_command():
             # Check if they're identical
             if casmap_content == pycasmap_content:
                 print("\n✅ Output files are IDENTICAL!")
+                assert True
             else:
                 print("\n❌ Output files differ")
+                assert False, "Output files differ"
                 
                 # Count constructs in each file
                 casmap_constructs = casmap_content.count('>cid_')
@@ -102,8 +104,7 @@ def test_build_command():
                 print(f"casmap error: {casmap_result.stderr}")
             if pycasmap_result.returncode != 0:
                 print(f"PyCasMap error: {pycasmap_result.stderr}")
-        
-        return True
+            assert False, "One or both commands failed"
         
     finally:
         # Clean up temporary files

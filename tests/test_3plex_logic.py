@@ -32,7 +32,7 @@ def test_3plex_logic():
     # Create 3-plex construct
     construct = Construct(spacers, constants, 0)
     
-    print(f"Construct ID: {construct.cid()}")
+    print(f"Construct ID: {construct.cid}")
     print(f"Plexity: {construct.plexity}")
     print(f"Full sequence: {construct.sequence()}")
     print()
@@ -75,12 +75,7 @@ def test_3plex_logic():
     print(f"  R2 contains spacers 2,3 only: {r2_has_2_3}")
     print()
     
-    if r1_has_1_2 and r2_has_2_3:
-        print("✅ 3-plex logic is CORRECT!")
-    else:
-        print("❌ 3-plex logic needs adjustment!")
-    
-    return r1_has_1_2 and r2_has_2_3
+    assert r1_has_1_2 and r2_has_2_3
 
 if __name__ == "__main__":
     test_3plex_logic() 

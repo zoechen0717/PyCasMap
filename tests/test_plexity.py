@@ -3,6 +3,7 @@
 Simple test script to verify plexity logic
 """
 
+import pytest
 import random
 from pycasmap.core import Spacer, Constant, Construct
 
@@ -23,8 +24,8 @@ def generate_test_data(plexity: int):
     
     return spacers, constants
 
-
-def test_plexity(plexity: int):
+@pytest.mark.parametrize("plexity", [3, 4, 5, 6, 7, 8, 9, 10])
+def test_plexity(plexity):
     """Test R1/R2 sequence generation for specific plexity"""
     print(f"\n{'='*60}")
     print(f"Testing {plexity}-plex logic")
@@ -64,7 +65,8 @@ def test_plexity(plexity: int):
         print(f"  R1 takes first {expected_r1_count} elements")
         print(f"  R2 takes elements {expected_r1_count-1} to end (reverse complement)")
     
-    return construct
+    assert len(r1_seq) > 0
+    assert len(r2_seq) > 0
 
 
 def main():

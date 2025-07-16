@@ -149,7 +149,7 @@ Examples:
             # Save sequences
             with open(args.output, 'w') as f:
                 for construct in constructs:
-                    f.write(f">cid_{construct.cid()}\n{construct.sequence()}\n")
+                    f.write(f">cid_{construct.cid}\n{construct.sequence()}\n")
             print(f"Construct sequences saved to: {args.output}")
             
         elif args.command == 'describe':
