@@ -9,10 +9,10 @@ description = "Flexible Python Implementation of CasMap supporting 3-10plex cons
 readme = "README.md"
 license = {text = "MIT"}
 authors = [
-    {name = "Your Name", email = "your.email@example.com"}
+    {name = "Zoe Chen", email = "zoechen0717@gmail.com"}
 ]
 maintainers = [
-    {name = "Your Name", email = "your.email@example.com"}
+    {name = "Zoe Chen", email = "zoechen0717@gmail.com"}
 ]
 keywords = ["bioinformatics", "crispr", "casmap", "sequencing", "analysis"]
 classifiers = [
@@ -26,6 +26,7 @@ classifiers = [
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
     "Topic :: Scientific/Engineering :: Bio-Informatics",
 ]
 requires-python = ">=3.7"
@@ -34,17 +35,13 @@ dependencies = []
 [project.optional-dependencies]
 dev = [
     "pytest>=6.0",
-    "pytest-cov>=2.0",
-    "black>=21.0",
-    "flake8>=3.8",
-    "mypy>=0.800",
 ]
 
 [project.urls]
-Homepage = "https://github.com/yourusername/pycasmap"
-Documentation = "https://github.com/yourusername/pycasmap#readme"
-Repository = "https://github.com/yourusername/pycasmap"
-"Bug Tracker" = "https://github.com/yourusername/pycasmap/issues"
+Homepage = "https://github.com/zoechen0717/PyCasMap"
+Documentation = "https://github.com/zoechen0717/PyCasMap#readme"
+Repository = "https://github.com/zoechen0717/PyCasMap"
+"Bug Tracker" = "https://github.com/zoechen0717/PyCasMap/issues"
 
 [project.scripts]
 pycasmap = "pycasmap.__main__:main"
